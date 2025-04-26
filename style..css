@@ -1,0 +1,240 @@
+*{
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: #0f1111;
+    color: white;
+}
+.amazon-logo{
+    height: 50px;
+    width: 115px;
+}
+#userlocation {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#userlocation i{
+    margin-top: 8px;
+    color: white;
+}
+#location p:first-of-type{
+    font: size 12px;;
+}
+#location p:last-of-type{
+    font-size: 14px;
+    font-weight: bold;
+}
+#ourproducts{
+    width: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color:gray;
+}
+#search{
+    display: flex;
+    padding: 5px 0px;
+    width: 50%;
+    height: 50px;
+}
+#searchInput{
+    height: 100%;
+    width: 100%;
+    outline: none;
+     border: none;
+    padding: 10px;
+}
+#search-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    background-color:orange;
+    color: #333333;
+    font-size: 21px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#cart{
+    color:whitesmoke;
+    font-size: 30px;
+}
+#secondary-nav{
+    background-color: #333333;
+    padding: 15px;
+    font-weight: 400px;
+    font-style: normal;
+}
+#menu{
+    display: flex;
+    gap: 20px;
+    color: white;
+    align-items: center;
+}
+#menu p{
+    font-size: 14px;
+}
+#menu p:last-of-type{
+    margin-left: auto;
+}
+#banner{
+    width: 100%;
+}
+#shopping-item{
+    display: grid;
+     grid-template-columns: repeat(4, 1fr); 
+     gap: 15px;
+    width: 100%;
+    background-color:antiquewhite;
+    padding: 20px;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: bisque;
+    padding: 15px;
+    text-align: center;
+}
+.product p:first-child{
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+}
+.product p:last-child{
+    font-size: 16px;
+    width: 100%;
+    color: #333333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.product img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+#moving-forward{
+    background-color: #968484;
+    text-align: center;
+     padding: 20px; 
+    cursor: pointer;
+}
+#moving-forward a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+html{
+    scroll-behavior: smooth;
+}
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:#333333;
+    padding: 15px 0px;
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: aliceblue;
+    font-size: 14px;
+}
+.footer-links p:first-of-type{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+#declaimer{
+    padding: 50px;
+    background-color: #140e0e;
+    color: aliceblue;
+}
+
+/* responsive Design */
+/* For tablet */
+
+@media(min-width : 768px) and (max-width :1024px){
+#search{
+    width: 40%;
+}
+#shopping-item{
+    grid-template-columns: repeat(2,1fr);
+}
+}
+
+/* mobile view */
+
+@media(max-width : 767px){
+    .navbar{
+        padding: 5px;
+    }
+    .amazon-logo{
+        height: 50px;
+        width: 70px;
+    }
+
+    #userlocation{
+        display: none;
+    }
+    .navbar p:last-of-type{
+        display: none;
+    }
+    #ourproducts{
+        display: none;
+    }
+    #searchInput{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    #cart{
+        font-size: 18px;
+    }
+    #secondary-nav{
+        padding: 8px;
+    }
+    #menu{
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+    #menu p:last-of-type{
+        display: none;
+    }
+    #banner{
+        height: 150px;
+    }
+    #shopping-item{
+        grid-template-columns: repeat(1,1fr);
+        padding: 0;
+        gap: 0;
+    }
+    .product{
+        margin: 20px;
+    }
+    .product p:first-of-type{
+        font-size: 16px;
+    }
+    .product p:last-of-type{
+        font-size: 14px;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .footer-links{
+        align-items: center;
+    }
+}
